@@ -6,7 +6,7 @@ import seaborn as sns
 # Load Dataset
 @st.cache_data
 def load_data():
-    df = pd.read_csv("day.csv")  # Pastikan dataset ada di folder yang sama
+    df = pd.read_csv("Dashboard/day.csv")  
     df['dteday'] = pd.to_datetime(df['dteday'])
     df['season'] = df['season'].map({1: 'Spring', 2: 'Summer', 3: 'Fall', 4: 'Winter'})
     df['weathersit'] = df['weathersit'].map({1: 'Clear', 2: 'Mist/Cloudy', 3: 'Light Rain/Snow'})
